@@ -8,7 +8,7 @@
                     scope: {location:'='},
 		    
 		    
-                    template: '<input id="google_places_ac" name="google_places_ac" type="text" class="input-block-level"/>',
+                    template: '<input class="form-control" id="google_places_ac" name="google_places_ac" type="text" class="input-block-level"/>',
 		    
                     link: function($scope, elm, attrs){
                         var autocomplete = new google.maps.places.Autocomplete($("#google_places_ac")[0], {});
@@ -21,8 +21,8 @@
 
 
 			var mapOptions = {
-        zoom: 12,
-        center: new google.maps.LatLng(20.0000, 68.0000),
+        zoom: 8,
+        center: new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng()),
         mapTypeId: google.maps.MapTypeId.TERRAIN
     }
 var latlon =[
